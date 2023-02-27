@@ -1,0 +1,87 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  Restaurant-Rating
+
+  Sample SAM Template for Restaurant-Rating
+
+# More info about Globals:
+Description: >
+  Restaurant-Rating
+
+  Sample SAM Template for Restaurant-Rating
+
+# More info about Globals: https://github.com/awslabs/serverless-application-model/blob/master/docs/globals.rst
+
+Globals:
+  Function:
+    Timeout: 120
+    MemorySize: 2048
+    Tracing: Active
+  Api:
+    TracingEnabled: true
+
+Resources:
+  ModelBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: model-bucket-restaurant-rating
+      AccessControl: PublicRead
+      CorsConfiguration:
+        CorsRules:
+          - AllowedHeaders:
+              - '*'
+            AllowedMethods:
+              - GET
+            AllowedOrigins:
+              - '*'
+            MaxAge: 3000
+  ModelBucketPolicy:
+    Type: AWS::S3::BucketPolicy
+    Properties:
+      Bucket: !Ref ModelBucket
+      PolicyDocument:
+        Statement:
+          - Action:
+              - s3:GetObject
+            Effect: Allow
+            Resource: !Sub ${ModelBucket.Arn}/*
+            Principal: '*'
+
+  PredictionFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: PredictionFunction
+      Handler: app.lambda_handler
+      Runtime: python3.7
+      Events:
+        GetPrediction:
+          Type: Api
+          Properties:
+            Path: /predict
+            Method: get
+            RestApiId: !Ref ServerlessRestApi
+      Environment:
+        Variables:
+          BUCKET_NAME: model-bucket-restaurant-rating
+      Policies:
+        - S3ReadPolicy:
+            BucketName: model-bucket-restaurant-rating
+
+Outputs:
+   
+  ServerlessRestApi:
+    Description: "URL for application"
+    Value: !Sub "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/"
+    Export:
+      Name: !Sub "${AWS::StackName}-ServerlessRestApi"
+  ServerlessRestApiGwId:
+    Description: "API Gateway ID"
+    Value: !Ref ServerlessRestApi
+    Export:
+      Name: !Sub "${AWS::StackName}-ServerlessRestApiGwId"
+  ServerlessRestApiRootResourceId:
+    Description: "Root Resource ID"
+    Value: !GetAtt ServerlessRestApi.RootResourceId
+    Export:
+      Name: !Sub "${AWS::StackName}-ServerlessRestApiRootResourceId"
