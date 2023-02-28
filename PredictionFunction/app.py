@@ -5,6 +5,7 @@ import boto3
 from pickle import loads
 from random import randint
 import sklearn
+from numpy import array
 
 
 # def getObjectFromsS3(key):
@@ -30,11 +31,14 @@ def lambda_handler(event, context):
         fields.append(randint(0,1))
     print("Fields",fields)
 
-    value=random_forest.predict(fields)
+    value=random_forest.predict(array([fields]))
+    print("Value",value)
+    rating=str(value[0])
+    print("Rating",rating)
 
     return {
         "statusCode": 200,
         "body": json.dumps({
-            "message": value,
+            "rating": rating,
         }),
     }
