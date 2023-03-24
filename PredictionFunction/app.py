@@ -6,7 +6,7 @@ from pickle import loads
 from random import randint
 import sklearn
 from numpy import array
-
+import os
 
 def loadModel(key):
     s3client = boto3.client('s3')
@@ -14,6 +14,11 @@ def loadModel(key):
     body = response['Body'].read()
     data = loads(body)
     return data
+def load_cuisines():
+    with open('cuisines.txt','rb') as f:
+        cuisines=loads(f)
+
+    return cuisines
 
 random_forest=loadModel('random_forest.sav')
 
@@ -33,6 +38,10 @@ def lambda_handler(event, context):
         parameters['price_range'],
         parameters['votes']
     ];
+
+    cuisines=load_cuisines()
+    print("Cuisines",cuisines)
+
     print("Field",fields)
 
     for _ in range(148):
