@@ -8,13 +8,6 @@ import sklearn
 from numpy import array
 
 
-# def getObjectFromsS3(key):
-#     s3 = boto3.resource('s3')
-#     obj = s3.Object('model-bucket-restaurant-rating', key)
-#     return obj.get()
-
-# random_forest_file = getObjectFromsS3('random_forest.sav')
-# random_forest=load(random_forest_file['Body'].read())
 def loadModel(key):
     s3client = boto3.client('s3')
     response = s3client.get_object(Bucket='model-bucket-restaurant-rating', Key=key)
@@ -26,7 +19,22 @@ random_forest=loadModel('random_forest.sav')
 
 
 def lambda_handler(event, context):
-    fields=[23,43,200,1,0,1,1,300,200]
+    parameters=event['queryStringParameters'];
+    print("Parameters",parameters)
+
+    field=[
+        parameters['longitude'],
+        parameters['latitude'],
+        parameters['average_cost_for_two'],
+        parameters['has_table_booking'],
+        parameters['has_online_delivery'],
+        parameters['is_delivering_now'],
+        parameters['switch_to_order_menu'],
+        parameters['price_range'],
+        parameters['votes']
+    ];
+    print("Field",field)
+
     for _ in range(148):
         fields.append(randint(0,1))
     print("Fields",fields)
