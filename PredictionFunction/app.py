@@ -14,11 +14,6 @@ def loadModel(key):
     body = response['Body'].read()
     data = loads(body)
     return data
-def load_cuisines():
-    with open('cuisines.txt','rb') as f:
-        cuisines=loads(f)
-
-    return cuisines
 
 random_forest=loadModel('random_forest.sav')
 
@@ -38,9 +33,6 @@ def lambda_handler(event, context):
         parameters['price_range'],
         parameters['votes']
     ];
-
-    cuisines=load_cuisines()
-    print("Cuisines",cuisines)
 
     print("Field",fields)
 
