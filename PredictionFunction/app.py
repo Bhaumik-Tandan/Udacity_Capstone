@@ -21,7 +21,7 @@ logistic_regression=loadModel('logistic_regression.sav')
 svm=loadModel('svm.sav')
 knn=loadModel('knn.sav')
 
-modelList=[random_forest,naive_bayes,logistic_regression,svm,knn]
+modelList=[random_forest,knn]
 
 def load_cuisines():
     s3client = boto3.client('s3')
