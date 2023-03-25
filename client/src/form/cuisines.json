@@ -1,0 +1,596 @@
+{
+      "list": [
+            {
+                  "name": "French",
+                  "id": 0
+            },
+            {
+                  "name": "Japanese",
+                  "id": 1
+            },
+            {
+                  "name": "Desserts",
+                  "id": 2
+            },
+            {
+                  "name": "Seafood",
+                  "id": 3
+            },
+            {
+                  "name": "Asian",
+                  "id": 4
+            },
+            {
+                  "name": "Filipino",
+                  "id": 5
+            },
+            {
+                  "name": "Indian",
+                  "id": 6
+            },
+            {
+                  "name": "Sushi",
+                  "id": 7
+            },
+            {
+                  "name": "Korean",
+                  "id": 8
+            },
+            {
+                  "name": "Chinese",
+                  "id": 9
+            },
+            {
+                  "name": "European",
+                  "id": 10
+            },
+            {
+                  "name": "Mexican",
+                  "id": 11
+            },
+            {
+                  "name": "American",
+                  "id": 12
+            },
+            {
+                  "name": "Ice Cream",
+                  "id": 13
+            },
+            {
+                  "name": "Cafe",
+                  "id": 14
+            },
+            {
+                  "name": "Italian",
+                  "id": 15
+            },
+            {
+                  "name": "Pizza",
+                  "id": 16
+            },
+            {
+                  "name": "Bakery",
+                  "id": 17
+            },
+            {
+                  "name": "Mediterranean",
+                  "id": 18
+            },
+            {
+                  "name": "Fast Food",
+                  "id": 19
+            },
+            {
+                  "name": "Brazilian",
+                  "id": 20
+            },
+            {
+                  "name": "Arabian",
+                  "id": 21
+            },
+            {
+                  "name": "Bar Food",
+                  "id": 22
+            },
+            {
+                  "name": "Grill",
+                  "id": 23
+            },
+            {
+                  "name": "International",
+                  "id": 24
+            },
+            {
+                  "name": "Peruvian",
+                  "id": 25
+            },
+            {
+                  "name": "Latin American",
+                  "id": 26
+            },
+            {
+                  "name": "Burger",
+                  "id": 27
+            },
+            {
+                  "name": "Juices",
+                  "id": 28
+            },
+            {
+                  "name": "Healthy Food",
+                  "id": 29
+            },
+            {
+                  "name": "Beverages",
+                  "id": 30
+            },
+            {
+                  "name": "Lebanese",
+                  "id": 31
+            },
+            {
+                  "name": "Sandwich",
+                  "id": 32
+            },
+            {
+                  "name": "Steak",
+                  "id": 33
+            },
+            {
+                  "name": "BBQ",
+                  "id": 34
+            },
+            {
+                  "name": "Gourmet Fast Food",
+                  "id": 35
+            },
+            {
+                  "name": "Mineira",
+                  "id": 36
+            },
+            {
+                  "name": "North Eastern",
+                  "id": 37
+            },
+            {
+                  "name": "Coffee and Tea",
+                  "id": 38
+            },
+            {
+                  "name": "Vegetarian",
+                  "id": 39
+            },
+            {
+                  "name": "Tapas",
+                  "id": 40
+            },
+            {
+                  "name": "Breakfast",
+                  "id": 41
+            },
+            {
+                  "name": "Diner",
+                  "id": 42
+            },
+            {
+                  "name": "Southern",
+                  "id": 43
+            },
+            {
+                  "name": "Southwestern",
+                  "id": 44
+            },
+            {
+                  "name": "Spanish",
+                  "id": 45
+            },
+            {
+                  "name": "Argentine",
+                  "id": 46
+            },
+            {
+                  "name": "Caribbean",
+                  "id": 47
+            },
+            {
+                  "name": "German",
+                  "id": 48
+            },
+            {
+                  "name": "Vietnamese",
+                  "id": 49
+            },
+            {
+                  "name": "Thai",
+                  "id": 50
+            },
+            {
+                  "name": "Modern Australian",
+                  "id": 51
+            },
+            {
+                  "name": "Teriyaki",
+                  "id": 52
+            },
+            {
+                  "name": "Cajun",
+                  "id": 53
+            },
+            {
+                  "name": "Canadian",
+                  "id": 54
+            },
+            {
+                  "name": "Tex-Mex",
+                  "id": 55
+            },
+            {
+                  "name": "Middle Eastern",
+                  "id": 56
+            },
+            {
+                  "name": "Greek",
+                  "id": 57
+            },
+            {
+                  "name": "Bubble Tea",
+                  "id": 58
+            },
+            {
+                  "name": "Tea",
+                  "id": 59
+            },
+            {
+                  "name": "Australian",
+                  "id": 60
+            },
+            {
+                  "name": "Fusion",
+                  "id": 61
+            },
+            {
+                  "name": "Cuban",
+                  "id": 62
+            },
+            {
+                  "name": "Hawaiian",
+                  "id": 63
+            },
+            {
+                  "name": "Salad",
+                  "id": 64
+            },
+            {
+                  "name": "Irish",
+                  "id": 65
+            },
+            {
+                  "name": "New American",
+                  "id": 66
+            },
+            {
+                  "name": "Soul Food",
+                  "id": 67
+            },
+            {
+                  "name": "Turkish",
+                  "id": 68
+            },
+            {
+                  "name": "Pub Food",
+                  "id": 69
+            },
+            {
+                  "name": "Persian",
+                  "id": 70
+            },
+            {
+                  "name": "Continental",
+                  "id": 71
+            },
+            {
+                  "name": "Singaporean",
+                  "id": 72
+            },
+            {
+                  "name": "Malay",
+                  "id": 73
+            },
+            {
+                  "name": "Cantonese",
+                  "id": 74
+            },
+            {
+                  "name": "Dim Sum",
+                  "id": 75
+            },
+            {
+                  "name": "Western",
+                  "id": 76
+            },
+            {
+                  "name": "Finger Food",
+                  "id": 77
+            },
+            {
+                  "name": "British",
+                  "id": 78
+            },
+            {
+                  "name": "Deli",
+                  "id": 79
+            },
+            {
+                  "name": "Indonesian",
+                  "id": 80
+            },
+            {
+                  "name": "North Indian",
+                  "id": 81
+            },
+            {
+                  "name": "Mughlai",
+                  "id": 82
+            },
+            {
+                  "name": "Biryani",
+                  "id": 83
+            },
+            {
+                  "name": "South Indian",
+                  "id": 84
+            },
+            {
+                  "name": "Pakistani",
+                  "id": 85
+            },
+            {
+                  "name": "Afghani",
+                  "id": 86
+            },
+            {
+                  "name": "Hyderabadi",
+                  "id": 87
+            },
+            {
+                  "name": "Rajasthani",
+                  "id": 88
+            },
+            {
+                  "name": "Street Food",
+                  "id": 89
+            },
+            {
+                  "name": "Goan",
+                  "id": 90
+            },
+            {
+                  "name": "African",
+                  "id": 91
+            },
+            {
+                  "name": "Portuguese",
+                  "id": 92
+            },
+            {
+                  "name": "Gujarati",
+                  "id": 93
+            },
+            {
+                  "name": "Armenian",
+                  "id": 94
+            },
+            {
+                  "name": "Mithai",
+                  "id": 95
+            },
+            {
+                  "name": "Maharashtrian",
+                  "id": 96
+            },
+            {
+                  "name": "Modern Indian",
+                  "id": 97
+            },
+            {
+                  "name": "Charcoal Grill",
+                  "id": 98
+            },
+            {
+                  "name": "Malaysian",
+                  "id": 99
+            },
+            {
+                  "name": "Burmese",
+                  "id": 100
+            },
+            {
+                  "name": "Chettinad",
+                  "id": 101
+            },
+            {
+                  "name": "Parsi",
+                  "id": 102
+            },
+            {
+                  "name": "Tibetan",
+                  "id": 103
+            },
+            {
+                  "name": "Raw Meats",
+                  "id": 104
+            },
+            {
+                  "name": "Kerala",
+                  "id": 105
+            },
+            {
+                  "name": "Belgian",
+                  "id": 106
+            },
+            {
+                  "name": "Kashmiri",
+                  "id": 107
+            },
+            {
+                  "name": "South American",
+                  "id": 108
+            },
+            {
+                  "name": "Bengali",
+                  "id": 109
+            },
+            {
+                  "name": "Iranian",
+                  "id": 110
+            },
+            {
+                  "name": "Lucknowi",
+                  "id": 111
+            },
+            {
+                  "name": "Awadhi",
+                  "id": 112
+            },
+            {
+                  "name": "Nepalese",
+                  "id": 113
+            },
+            {
+                  "name": "Drinks Only",
+                  "id": 114
+            },
+            {
+                  "name": "Oriya",
+                  "id": 115
+            },
+            {
+                  "name": "Bihari",
+                  "id": 116
+            },
+            {
+                  "name": "Assamese",
+                  "id": 117
+            },
+            {
+                  "name": "Andhra",
+                  "id": 118
+            },
+            {
+                  "name": "Mangalorean",
+                  "id": 119
+            },
+            {
+                  "name": "Malwani",
+                  "id": 120
+            },
+            {
+                  "name": "Cuisine Varies",
+                  "id": 121
+            },
+            {
+                  "name": "Moroccan",
+                  "id": 122
+            },
+            {
+                  "name": "Naga",
+                  "id": 123
+            },
+            {
+                  "name": "Sri Lankan",
+                  "id": 124
+            },
+            {
+                  "name": "Peranakan",
+                  "id": 125
+            },
+            {
+                  "name": "Sunda",
+                  "id": 126
+            },
+            {
+                  "name": "Ramen",
+                  "id": 127
+            },
+            {
+                  "name": "Kiwi",
+                  "id": 128
+            },
+            {
+                  "name": "Asian Fusion",
+                  "id": 129
+            },
+            {
+                  "name": "Taiwanese",
+                  "id": 130
+            },
+            {
+                  "name": "Fish and Chips",
+                  "id": 131
+            },
+            {
+                  "name": "Contemporary",
+                  "id": 132
+            },
+            {
+                  "name": "Scottish",
+                  "id": 133
+            },
+            {
+                  "name": "Curry",
+                  "id": 134
+            },
+            {
+                  "name": "Patisserie",
+                  "id": 135
+            },
+            {
+                  "name": "South African",
+                  "id": 136
+            },
+            {
+                  "name": "Durban",
+                  "id": 137
+            },
+            {
+                  "name": "Kebab",
+                  "id": 138
+            },
+            {
+                  "name": "Turkish Pizza",
+                  "id": 139
+            },
+            {
+                  "name": "Izgara",
+                  "id": 140
+            },
+            {
+                  "name": "World Cuisine",
+                  "id": 141
+            },
+            {
+                  "name": "D\u00ed_ner",
+                  "id": 142
+            },
+            {
+                  "name": "Restaurant Cafe",
+                  "id": 143
+            },
+            {
+                  "name": "B\u00ed_rek",
+                  "id": 144
+            },
+            {
+                  "name": "D\u00f6ner",
+                  "id": 145
+            },
+            {
+                  "name": "B\u00f6rek",
+                  "id": 146
+            },
+            {
+                  "name": "Fresh Fish",
+                  "id": 147
+            }
+      ]
+}
