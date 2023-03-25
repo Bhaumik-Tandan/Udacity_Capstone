@@ -17,11 +17,26 @@ def loadModel(key):
 
 random_forest=loadModel('random_forest.sav')
 
+def load_cuisines():
+    s3client = boto3.client('s3')
+    response = s3client.get_object(Bucket='cusines', Key='cuisines.json')
+    body = response['Body'].read()
+    data = json.loads(body)
+    return data
+
+def append_cusines_to_fields(fields,cuisinesList,parameters):
+    cuisines=parameters['cuisines'].split(' ')
+    for cuisine in cuisinesList:
+        if cuisine in cuisines:
+            fields.append(1)
+        else:
+            fields.append(0)
+
 
 def lambda_handler(event, context):
     parameters=event['queryStringParameters'];
     print("Parameters",parameters)
-# https://wpgay7f1u9.execute-api.us-east-1.amazonaws.com/Prod/predict?longitude=7&latitude=28.1234&average_cost_for_two=100&has_table_booking=1&has_online_delivery=1&is_delivering_now=1&switch_to_order_menu=1&price_range=1&votes=1000
+# https://wpgay7f1u9.execute-api.us-east-1.amazonaws.com/Prod/predict?longitude=7&latitude=28.1234&average_cost_for_two=100&has_table_booking=1&has_online_delivery=1&is_delivering_now=1&switch_to_order_menu=1&price_range=1&votes=1000&cuisines=French%20Japanese
     fields=[
         parameters['longitude'],
         parameters['latitude'],
@@ -35,10 +50,11 @@ def lambda_handler(event, context):
     ];
 
     print("Field",fields)
+    cuisines=load_cuisines()
+    print("Cuisines",cuisines)
+    append_cusines_to_fields(fields,cuisines,parameters)
+    print("Fields after adding cuisines",fields)
 
-    for _ in range(148):
-        fields.append(randint(0,1))
-    print("Fields",fields)
 
     value=random_forest.predict(array([fields]))
     print("Value",value)
