@@ -16,6 +16,12 @@ def loadModel(key):
     return data
 
 random_forest=loadModel('random_forest.sav')
+naive_bayes=loadModel('naive_bayes.sav')
+logistic_regression=loadModel('logistic_regression.sav')
+svm=loadModel('svm.sav')
+knn=loadModel('knn.sav')
+
+modelList=[random_forest,naive_bayes,logistic_regression,svm,knn]
 
 def load_cuisines():
     s3client = boto3.client('s3')
@@ -36,7 +42,7 @@ def append_cusines_to_fields(fields,cuisinesList,parameters):
 def lambda_handler(event, context):
     parameters=event['queryStringParameters'];
     print("Parameters",parameters)
-# https://wpgay7f1u9.execute-api.us-east-1.amazonaws.com/Prod/predict?longitude=7&latitude=28.1234&average_cost_for_two=100&has_table_booking=1&has_online_delivery=1&is_delivering_now=1&switch_to_order_menu=1&price_range=1&votes=1000&cuisines=French%20Japanese
+# https://wpgay7f1u9.execute-api.us-east-1.amazonaws.com/Prod/predict?model=0&longitude=7&latitude=28.1234&average_cost_for_two=100&has_table_booking=1&has_online_delivery=1&is_delivering_now=1&switch_to_order_menu=1&price_range=1&votes=1000&cuisines=French%20Japanese
     fields=[
         parameters['longitude'],
         parameters['latitude'],
@@ -54,9 +60,11 @@ def lambda_handler(event, context):
     print("Cuisines",cuisines)
     append_cusines_to_fields(fields,cuisines,parameters)
     print("Fields after adding cuisines",fields)
+    model=int(parameters['model'])
+    print("Model",model)
 
-
-    value=random_forest.predict(array([fields]))
+    value=modelList[model].predict(array([fields]))
+    
     print("Value",value)
     rating=str(value[0])
     print("Rating",rating)
