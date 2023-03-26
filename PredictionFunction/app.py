@@ -16,9 +16,6 @@ def loadModel(key):
     return data
 
 random_forest=loadModel('random_forest.sav')
-naive_bayes=loadModel('naive_bayes.sav')
-logistic_regression=loadModel('logistic_regression.sav')
-svm=loadModel('svm.sav')
 knn=loadModel('knn.sav')
 
 modelList=[random_forest,knn]
@@ -71,6 +68,11 @@ def lambda_handler(event, context):
 
     return {
         "statusCode": 200,
+        'headers': {
+            'Access-Control-Allow-Headers': 'Content-Type',
+            'Access-Control-Allow-Origin': '*',
+            'Access-Control-Allow-Methods': 'OPTIONS,POST,GET'
+        },
         "body": json.dumps({
             "rating": rating,
         }),
